@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "JapSnatch",
+    "version": "1.0",
+    "description": "If I want something, I take it",
+
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+
+    "background" : {
+        "scripts" : ["modele.js"]
+    }, 
+  
+    "content_scripts": [
+      {
+      "matches": ["*://*.japscan.to/lecture-en-ligne*"],
+      "js": ["webcomic.js"]
+      }
+    ],
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+    "permissions" : [
+      "downloads", 
+      "notifications", 
+      "storage"
+    ]
+}
