@@ -1,8 +1,8 @@
 function raiponce(messsage) {
-	console.log("j'ai reçu une réponse" + messsage.messsage)
+	console.log("j'ai reçu une réponse " + messsage)
 	let node = document.querySelectorAll('div#image>a')
 	setTimeout(function() { 
-		document.location.href = node[0].href 
+		//document.location.href = node[0].href 
 	}, 2000);
 	
 }
@@ -13,7 +13,6 @@ function error(error) {
 
 function selectImage(){
 	let node = document.querySelectorAll('div#image>a>img');
-	console.log(node[0].src)
 	let image = node[0].src
 	console.log(image)
 	chrome.runtime.sendMessage({"url": image}, raiponce);
